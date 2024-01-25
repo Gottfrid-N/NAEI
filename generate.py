@@ -45,7 +45,7 @@ if __name__ == "__main__":
         for place in places:
             for diacritic in diacritics:
                 for lateral in laterals:
-                    glyphs[f"{voice}{place}{diacritic}{lateral}"] = f"\\U{str(hex(57344 + index)).removeprefix(prefix).rjust(8, fill_char)}"
+                    glyphs[f"{voice}{place}{diacritic}{lateral}"] = f"{chr(57344 + index)}"
                     index += 1
     print(glyphs)
     print(len(glyphs))
